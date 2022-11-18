@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Player/PlayerUI.gd" type="Script" id=2]
+
+[node name="PlayerUI" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="PlayerStatusContainer" type="VBoxContainer" parent="."]
+anchor_right = 0.415
+anchor_bottom = 0.148
+margin_right = -0.200012
+margin_bottom = 0.0400009
+
+[node name="HealthContainer" type="HBoxContainer" parent="PlayerStatusContainer"]
+margin_right = 199.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Health" type="Label" parent="PlayerStatusContainer/HealthContainer"]
+margin_top = 2.0
+margin_right = 26.0
+margin_bottom = 16.0
+text = "HP: "
+
+[node name="HealthPoints" type="Label" parent="PlayerStatusContainer/HealthContainer"]
+margin_left = 30.0
+margin_top = 2.0
+margin_right = 30.0
+margin_bottom = 16.0
+
+[node name="ManaContainer" type="HBoxContainer" parent="PlayerStatusContainer"]
+margin_top = 22.0
+margin_right = 199.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Mana" type="Label" parent="PlayerStatusContainer/ManaContainer"]
+margin_top = 2.0
+margin_right = 28.0
+margin_bottom = 16.0
+text = "MP: "
+
+[node name="ManaPoints" type="Label" parent="PlayerStatusContainer/ManaContainer"]
+margin_left = 32.0
+margin_top = 2.0
+margin_right = 32.0
+margin_bottom = 16.0

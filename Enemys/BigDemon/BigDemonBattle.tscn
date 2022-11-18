@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Enemys/BigDemon/BigDemonAnimation.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Enemys/EnemyStats.gd" type="Script" id=2]
+[ext_resource path="res://Enemys/EnemyCombat.gd" type="Script" id=3]
+[ext_resource path="res://Enemys/trinagulo.png" type="Texture" id=4]
+
+[node name="BigDemonBattle" type="Node2D" groups=["Enemy"]]
+script = ExtResource( 3 )
+
+[node name="Status" type="Node" parent="."]
+script = ExtResource( 2 )
+CHARACTER_NAME = "BigDemon"
+MAX_HP = 200
+MAX_MP = 10
+AMROR = 10
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -1, -19 )
+rotation = -3.14159
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+animation = "Run"
+frame = 2
+playing = true
+flip_h = true

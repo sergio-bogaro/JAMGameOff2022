@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Player/Player Status.gd" type="Script" id=1]
+
+[node name="PlayerStatus" type="Node"]
+script = ExtResource( 1 )
+MAX_HP = 100
+MAX_MP = 200

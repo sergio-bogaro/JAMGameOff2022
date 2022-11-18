@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Skills/SpellsAnimations/FireArrow.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Skills/Projectile.tscn" type="PackedScene" id=2]
+
+[node name="Projectile" instance=ExtResource( 2 )]
+SPEED = 377
+DAMAGE = 20
+
+[node name="AnimatedSprite" parent="." index="2"]
+position = Vector2( 0, -0.5 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 1 )
+animation = "SkillEffect"
+frame = 26
+playing = true
